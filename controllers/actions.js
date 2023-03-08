@@ -78,7 +78,7 @@ Router.post('/register', async(request, response) => {
 //LOGIN
 Router.post('/login', async(request, response) => {})
     //Get account info from client
-    const{email, password} = request.body
+    const {email, password} = request.body;
     //Check if user exist by email 
     Account.findOne({email: email})
     .then(async account => {
