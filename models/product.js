@@ -10,6 +10,22 @@ const productSchema = new Schema({
     productDescription: String,
     productImage: String,
     productStatus: String, //new ,used,
+    messages:[
+        {
+            msgTitle: String,
+            msgContent: String,
+            createdAt: {type: Date, default: Date.now},
+            associateAccount: { type: mongoose.Schema.Types.ObjectId, ref: 'Account'},
+        }
+    ],
+
+    gallery:[
+        {
+            imageSource: String,
+            description: String,
+            createdAt: {type: Date, default: Date.now},
+        }
+    ],
     createdAt: {type: Date, default: Date.now},
     updatedAt: {type: Date, default: Date.now}
 })
