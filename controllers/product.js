@@ -257,7 +257,7 @@ Router.post('/sendMessageToProduct/:id', Auth,async(request,response) => {
     const _message = {
         msgTitle: msgTitle,
         msgContent: msgContent,
-        associateSender: user, _id
+        associateSender: user, id
     }
 
     product.messages.push(_message);
