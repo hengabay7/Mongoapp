@@ -53,6 +53,7 @@ Router.post('/login', async(request,response) => {
     .then(async account => {
         if(!account){
             return response.status(200).json({
+                status: false,
                 message: 'Account not exist'
             });
         }
@@ -61,6 +62,7 @@ Router.post('/login', async(request,response) => {
         const isMatch = await bcryptjs.compare(password,account.password)
         if (!isMatch){
             return response.status(200).json({
+                status: false,
                 message: 'password not match'
             });
         }
@@ -76,6 +78,7 @@ Router.post('/login', async(request,response) => {
         
         //Response
         return response.status(200).json({
+            status: true,
             message: account,
             token: token
         });
@@ -83,6 +86,7 @@ Router.post('/login', async(request,response) => {
     })
     .catch(error => {
         return response.status(500).json({
+            status:false,
             message: error.message
         })
     })

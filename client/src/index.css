@@ -3,8 +3,54 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  height:100vh;
+
+}
+
+.container{
+  width:100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0% 20px;
+  text-align: center;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #999;
+  margin-bottom: 60px;
+}
+
+.header ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.header ul li{
+  margin-left: 30px;
+}
+
+.header ul li a{
+  text-decoration: none;
+  display: block;
+  background: #0099cc;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+
+}
+
+.header ul li a:hover{
+  background-color:gray;
+}
+
+.logo{
+  float: left;
 }
 
 h1.haedline{
@@ -14,4 +60,22 @@ h1.haedline{
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.from-control{
+  padding: 10px;
+  border-radius: 4px;
+  width: 300px;
+  border: 1px solid #ccc;
+  margin-top: 12px;
+}
+
+.login-btn{
+  padding: 10px 0;
+  border-radius: 4px;
+  width: 320px;
+  background-color: #0099cc;
+  margin-top: 12px;
+  border: none;
+  color: #ffffff;
 }
