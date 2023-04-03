@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const baseUrl = 'http://localhost:3001/api';
 
-const register = async() => {
+const register = async(data) => {
     const respones = await axios.post(baseUrl + '/account/register', data);
     if(respones.data){
         localStorage.setItem('user',JSON.stringify(respones.data))
@@ -17,6 +17,8 @@ const login = async(data) => {
     }
     return respones.data;
 }
+
+
 
 const logout = async() => {
     localStorage.removeItem('user');
